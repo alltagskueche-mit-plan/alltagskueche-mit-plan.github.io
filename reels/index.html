@@ -9,27 +9,26 @@
   <link rel="icon" href="../assets/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
-  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="../index.html" data-keep-src>
-        <img class="brand-logo" src="../assets/img/marke/logo-monogramm.png" width="160" height="160" alt="">
-        <span class="brand-wordmark">Hanna Weidinger</span>
-        <span class="brand-text">
-          <span class="brand-name">Alltagsküche mit Plan</span>
-        </span>
+<body class="subpage subpage-reels">
+    <a class="skip sr-only" href="#inhalt">Zum Inhalt springen</a>
+  <div class="topnote">HANNA WEIDINGER <b>✦</b> ALLTAGSKÜCHE MIT PLAN <b>✦</b> KOCHBÜCHER &amp; ERNÄHRUNG</div>
+  <header class="header">
+    <nav class="container nav" aria-label="Hauptnavigation">
+      <a class="nav-logo" href="../index.html" data-keep-src>
+        <img class="round-mark" src="../assets/img/marke/logo-monogramm.png" width="160" height="160" alt="">
+        <span class="logotext">Hanna Weidinger<small>Natürlich essen · Einfach genießen</small></span>
       </a>
-      <nav class="nav" aria-label="Seitenabschnitte">
-        <a href="#plaene">Pläne</a>
-        <a href="#buecher">Bücher</a>
-        <a href="../index.html" data-keep-src>Startseite</a>
-      </nav>
-    </div>
+      <button id="menu-btn" class="menu-btn" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <div class="links" id="nav-links">
+        <a href="../index.html" data-keep-src>Start</a>
+        <a href="../index.html#buecher" data-keep-src>Die Kochbücher</a>
+        <a href="../index.html#fuer-wen" data-keep-src>Für den Alltag</a>
+        <a href="../index.html#rezept" data-keep-src>Rezept</a>
+        <a href="#plaene" data-keep-src>Reels-Rezepte</a>
+        <a class="nav-cta" href="../index.html#buecher" data-keep-src>Bücher entdecken ↗</a>
+      </div>
+    </nav>
   </header>
-    <div class="slogan-strip">
-      <p class="slogan-brush">Natürlich essen. Einfach genießen.</p>
-    </div>
 
 
   <main id="inhalt">
@@ -251,28 +250,44 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <p class="footer-brand">Alltagsküche mit Plan</p>
-        <p class="credits footer-tagline">Hanna Weidinger · Kochbücher bei Amazon</p>
-        <div class="footer-links">
-          <a href="../index.html" data-keep-src>Startseite</a>
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">HANNA <em>Weidinger</em></div>
+          <p>Natürlich essen. Einfach genießen.<br>Alltagsküche mit Plan – Kochbücher mit Rezepten, Wochenplänen und Einkaufslisten.</p>
+        </div>
+        <div>
+          <h4>ENTDECKEN</h4>
+          <a href="../index.html#buecher" data-keep-src>Die Kochbücher</a>
+          <a href="../index.html#fuer-wen" data-keep-src>Für den Alltag</a>
+          <a href="../index.html#rezept" data-keep-src>Rezeptbeispiel</a>
+          <a href="../reels/" data-keep-src>Rezepte aus den Reels</a>
+          <a href="../plan/sonntag-vier-schritte/" data-keep-src>Sonntags-Plan</a>
+        </div>
+        <div>
+          <h4>RECHTLICHES</h4>
           <a href="../impressum.html">Impressum</a>
           <a href="../datenschutz.html">Datenschutz</a>
-          <a data-amazon="serie" href="https://www.amazon.de/dp/B0HHGNQ95L">Serie auf Amazon</a>
+          <a href="../index.html#faq" data-keep-src>Fragen &amp; Antworten</a>
         </div>
       </div>
-      <div class="credits">
-        <p style="margin:0 0 .4rem;"><strong>Bildnachweis.</strong> Das Vorschaubild zu Plan Nr. 1 ist ein Standbild aus dem Reel „Sonntag in vier Schritten“. Filmausschnitt von Pexels, Lizenz „Free“ (<a href="https://www.pexels.com/license/">pexels.com/license</a>). Kommerzielle Nutzung erlaubt; die Namensnennung steht hier freiwillig.</p>
+      <div class="footer-bottom">
+        <span>© Hanna Weidinger · Alltagsküche mit Plan</span>
+        <span>Porträt: Illustration (KI) · Käufe über Amazon</span>
+      </div>
+      <div class="credits" style="margin-top:1.1rem;">
+        <p style="margin:0 0 .4rem;"><strong>Bildnachweis.</strong> Fotos von Pexels, Lizenz „Free“ (<a href="https://www.pexels.com/license/">pexels.com/license</a>). Kommerzielle Nutzung erlaubt; die Namensnennung steht hier freiwillig.</p>
         <ul>
-          <li>Standbild Plan Nr. 1: Sarah Chai, „Putting Pasta in a Glass Container“, Pexels 7250802; Text und Monogramm: Hanna Weidinger / Alltagsküche mit Plan</li>
+          <li>Porträt: Illustration (KI) für das Pseudonym Hanna Weidinger, keine reale Person</li>
+          <li>Rezeptfoto: Ella Olsson, „Flat-lay Photography of Vegetable Salad on Plate“, Pexels 1640777</li>
           <li>Cover: Hanna Weidinger / Alltagsküche mit Plan</li>
           <li>Monogramm: eigene Grafik der Reihe</li>
         </ul>
       </div>
     </div>
   </footer>
+  <script src="../assets/js/site.js"></script>
   <script src="../assets/js/amazon-links.js"></script>
   <script src="../assets/js/reels-list.js"></script>
 </body>

@@ -1,0 +1,20 @@
+{
+  "hinweis": "Quelle für die Seite /reels/. Neuestes Reel oben (höhere Nummer bzw. späteres Datum). Siehe README-reels.md im Repo-Wurzelverzeichnis.",
+  "reels": [
+    {
+      "nr": 1,
+      "titel": "Vier Schritte am Sonntag",
+      "slug": "sonntag-vier-schritte",
+      "datum": "2026-11-22",
+      "datum_anzeige": "Reel vom 22. November 2026",
+      "beschreibung": "Ofengemüse, Weiße-Bohnen-Tomaten-Eintopf, Bulgur und Zitronen-Senf-Kräuter-Soße – einmal am Sonntag vorkochen, unter der Woche jeden Tag etwas anderes essen.",
+      "bild": "../assets/img/reels/plan-01-sonntag.jpg",
+      "bild_webp": "../assets/img/reels/plan-01-sonntag.webp",
+      "bild_breite": 800,
+      "bild_hoehe": 1200,
+      "bild_alt": "Standbild aus dem Reel „Vier Schritte am Sonntag“: Hände legen gekochte Nudeln in eine Glasbox, darüber der Text „Sonntags vorkochen — ohne den ganzen Tag in der Küche zu stehen.“",
+      "bildnachweis": "Standbild aus dem Reel „Sonntag in vier Schritten“. Filmausschnitt: Sarah Chai, „Putting Pasta in a Glass Container“, Pexels 7250802, Lizenz Free (pexels.com/license). Text und Monogramm: Hanna Weidinger / Alltagsküche mit Plan.",
+      "plan_url": "../plan/sonntag-vier-schritte/"
+    }
+  ]
+}

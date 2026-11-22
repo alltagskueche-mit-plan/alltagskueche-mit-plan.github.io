@@ -241,6 +241,34 @@ h3 { font-weight: 700; font-size: 1.15rem; }
   background:
     linear-gradient(180deg, rgba(44, 58, 40, 0.08) 0%, rgba(44, 58, 40, 0.2) 45%, rgba(44, 58, 40, 0.48) 100%);
 }
+.hero.hero-atmosphere {
+  align-items: center;
+  min-height: 24rem;
+  height: auto;
+  max-height: none;
+  background: var(--creme);
+}
+.hero.hero-atmosphere .hero-photo {
+  display: block;
+  object-position: center 78%;
+}
+.hero.hero-atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(246, 242, 234, 0.5) 0%, rgba(246, 242, 234, 0.62) 36%, rgba(246, 242, 234, 0.9) 78%, var(--creme) 100%);
+}
+@media (max-width: 639px) {
+  .hero.hero-atmosphere { min-height: 0; }
+  .hero.hero-atmosphere .hero-photo { object-position: center 70%; }
+  .hero.hero-atmosphere::after {
+    background:
+      linear-gradient(180deg, rgba(246, 242, 234, 0.4) 0%, rgba(246, 242, 234, 0.55) 42%, rgba(246, 242, 234, 0.9) 84%, var(--creme) 100%);
+  }
+}
+
 .hero-inner {
   max-width: var(--max);
   margin: 0 auto;
@@ -636,7 +664,10 @@ details p { margin: 0 0 1rem; text-wrap: pretty; }
 
 /* Unterseite: Sonntags-Plan */
 .plan-hero {
-  background: linear-gradient(180deg, var(--creme-deep) 0%, var(--creme) 100%);
+  background:
+    linear-gradient(180deg, rgba(246, 242, 234, 0.82) 0%, rgba(246, 242, 234, 0.94) 100%),
+    url("../img/marke/hintergrund-botanik.jpg") center / cover no-repeat,
+    var(--creme-deep);
   border-bottom: 1px solid var(--line);
   padding: 2.3rem 0 2.1rem;
 }

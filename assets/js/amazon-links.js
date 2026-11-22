@@ -79,6 +79,19 @@
     }
   });
 
+  // ?src= auf internen Navigationslinks erhalten (ohne Cookies oder Speicherung)
+  if (channel !== "direkt") {
+    document.querySelectorAll("[data-keep-src]").forEach(function (el) {
+      var href = el.getAttribute("href");
+      if (!href || href.indexOf("src=") !== -1) return;
+      var hashIndex = href.indexOf("#");
+      var base = hashIndex === -1 ? href : href.slice(0, hashIndex);
+      var hash = hashIndex === -1 ? "" : href.slice(hashIndex);
+      var sep = base.indexOf("?") === -1 ? "?" : "&";
+      el.setAttribute("href", base + sep + "src=" + encodeURIComponent(channel) + hash);
+    });
+  }
+
   document.documentElement.setAttribute("data-src", channel);
   document.documentElement.setAttribute("data-show-band7", SHOW_BAND7_MEALPREP ? "true" : "false");
   var mealprepCard = document.querySelector("[data-band=\"mealprep\"]");
@@ -89,4 +102,19 @@
       mealprepCard.setAttribute("hidden", "");
     }
   }
+
+  // Einkaufsliste drucken & Haken zurücksetzen (nur auf Plan-Unterseiten aktiv)
+  document.querySelectorAll("[data-print-plan]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      window.print();
+    });
+  });
+
+  document.querySelectorAll("[data-reset-checks]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".shop-check input[type=\"checkbox\"]").forEach(function (cb) {
+        cb.checked = false;
+      });
+    });
+  });
 })();

@@ -541,3 +541,350 @@ details p { margin: 0 0 1rem; text-wrap: pretty; }
     align-items: start;
   }
 }
+
+/* Startseite: Hinweis-Banner zum Sonntags-Plan */
+.plan-banner-wrap {
+  padding: 1.25rem 0 0;
+}
+.plan-banner {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--tomato);
+  border-radius: 16px;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  align-items: flex-start;
+  box-shadow: 0 6px 20px rgba(8, 40, 51, 0.06);
+}
+.plan-banner-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tomato);
+  margin: 0 0 0.25rem;
+}
+.plan-banner h2 {
+  font-size: 1.22rem;
+  margin: 0 0 0.25rem;
+}
+.plan-banner p {
+  margin: 0;
+  color: var(--petrol-soft);
+  text-wrap: pretty;
+}
+@media (min-width: 720px) {
+  .plan-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.45rem;
+  }
+}
+
+/* Unterseite: Sonntags-Plan */
+.plan-hero {
+  background: linear-gradient(180deg, var(--creme-deep) 0%, var(--creme) 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 2.3rem 0 2.1rem;
+}
+.plan-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--petrol-soft);
+  margin-bottom: 0.9rem;
+}
+.plan-breadcrumb:hover { color: var(--tomato); }
+.plan-hero h1 {
+  font-size: clamp(1.85rem, 5.5vw, 2.95rem);
+  max-width: 22ch;
+  margin-bottom: 0.65rem;
+}
+.plan-hero .lede {
+  max-width: 44rem;
+  margin-bottom: 1.15rem;
+}
+.plan-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+}
+.plan-pill {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--petrol);
+}
+.plan-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+.plan-callout {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--petrol);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+  max-width: 52rem;
+}
+.plan-callout p { margin: 0; }
+.plan-callout p + p { margin-top: 0.5rem; }
+
+/* 4-Schritte-Übersicht */
+.steps-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 1fr;
+}
+.step-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+}
+.step-num {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tomato);
+  margin: 0 0 0.25rem;
+}
+.step-card h3 { margin-bottom: 0.3rem; font-size: 1.1rem; }
+.step-card p { margin: 0; font-size: 0.96rem; color: var(--petrol-soft); }
+@media (min-width: 640px) {
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .steps-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Einkaufsliste (mobil abhakbar + druckbar) */
+.shop-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+.shop-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+.shop-group {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.1rem 1.15rem 1.2rem;
+}
+.shop-group h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.65rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--line);
+}
+.shop-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.2rem;
+}
+.shop-check label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.42rem 0.25rem;
+  min-height: 2.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.shop-check label:hover { background: var(--creme); }
+.shop-check input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.18rem;
+  accent-color: var(--petrol);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.shop-check input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: var(--petrol-soft);
+  opacity: 0.72;
+}
+.shop-qty { font-weight: 700; color: var(--petrol); }
+.shop-note {
+  margin-top: 1rem;
+  background: var(--creme-deep);
+  border-radius: 12px;
+  padding: 0.9rem 1.05rem;
+  font-size: 0.94rem;
+}
+@media (min-width: 720px) {
+  .shop-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1020px) {
+  .shop-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Sonntags-Ablauf Zeitleiste */
+.timeline {
+  display: grid;
+  gap: 0.75rem;
+}
+.tl-row {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  display: grid;
+  gap: 0.45rem 1.2rem;
+  grid-template-columns: 1fr;
+}
+.tl-time {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--tomato);
+}
+.tl-dur {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--petrol-soft);
+}
+.tl-body h3 { font-size: 1.05rem; margin: 0 0 0.25rem; }
+.tl-body p { margin: 0; text-wrap: pretty; }
+@media (min-width: 640px) {
+  .tl-row { grid-template-columns: 10.5rem 1fr; align-items: start; }
+}
+
+/* Bausteine Detail */
+.baustein-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 1fr;
+}
+.baustein-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--petrol);
+  border-radius: 16px;
+  padding: 1.2rem 1.25rem 1.35rem;
+}
+.baustein-card h3 { font-size: 1.2rem; margin-bottom: 0.45rem; }
+.baustein-card h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--petrol-soft);
+  margin: 1rem 0 0.4rem;
+}
+.baustein-card ul { margin: 0; padding-left: 1.15rem; }
+.baustein-card li { margin: 0.22rem 0; }
+.baustein-card p { margin: 0.4rem 0 0; text-wrap: pretty; }
+@media (min-width: 820px) {
+  .baustein-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Lagerung & Mo-Fr */
+.storage-grid {
+  display: grid;
+  gap: 0.95rem;
+  grid-template-columns: 1fr;
+}
+.storage-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+}
+.storage-card h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+.storage-card p { margin: 0; text-wrap: pretty; }
+@media (min-width: 720px) {
+  .storage-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.week-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+.day-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.15rem 1.2rem;
+}
+.day-tag {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tomato);
+  margin: 0 0 0.25rem;
+}
+.day-card h3 { font-size: 1.12rem; margin: 0 0 0.4rem; }
+.day-card p { margin: 0; text-wrap: pretty; }
+.day-note {
+  margin-top: 0.55rem !important;
+  font-size: 0.88rem;
+  color: var(--petrol-soft);
+}
+@media (min-width: 720px) {
+  .week-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1020px) {
+  .week-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.section-alt {
+  background: var(--creme-deep);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Druckansicht für Einkaufsliste & Plan */
+@media print {
+  body { background: #fff; color: #000; font-size: 10.5pt; line-height: 1.4; }
+  .site-header, .plan-jump, .shop-toolbar, .no-print, #buecher, #hinweise, .site-footer {
+    display: none !important;
+  }
+  .plan-hero { background: #fff; border-bottom: 1px solid #999; padding: 0 0 10pt; }
+  .section { padding: 12pt 0; }
+  .section-alt { background: #fff; border: 0; }
+  .shop-grid, .baustein-grid, .storage-grid, .week-grid, .steps-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8pt;
+  }
+  .shop-group, .baustein-card, .storage-card, .day-card, .tl-row, .step-card, .plan-callout {
+    border: 1px solid #bbb;
+    box-shadow: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    padding: 8pt;
+  }
+  .shop-check label { min-height: 0; padding: 2pt 0; }
+  h1 { font-size: 18pt; }
+  h2 { font-size: 13pt; }
+  h3 { font-size: 11pt; }
+}

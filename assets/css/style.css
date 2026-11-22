@@ -1,7 +1,16 @@
-/* Alltagsküche mit Plan — lokale statische Seite, Reihenlook V1b
-   Creme 249,245,233 / Petrol 12,64,78 / Tomate 200,64,36
+/* Alltagsküche mit Plan — Vorschau Markenstil 22.11.2026
+   Branch redesign-marke, nicht live.
+   Salbeigrün #52694A / Sand #E8DCC7 / Gold #B58A52 / Creme #F6F2EA
+   Überschriften: Playfair Display; Text: Montserrat; Slogan: Great Vibes.
    Schriften lokal, keine externen Requests. */
 
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
@@ -10,29 +19,36 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
-  font-weight: 100 900;
+  font-family: "Great Vibes";
+  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --creme: #f9f5e9;
-  --creme-deep: #f0ead8;
-  --petrol: #0c404e;
-  --petrol-soft: #165568;
-  --petrol-ink: #082833;
-  --tomato: #c84024;
-  --tomato-deep: #a8331c;
-  --paper: #fffdf8;
-  --line: rgba(12, 64, 78, 0.14);
-  --shadow: 0 14px 36px rgba(8, 40, 51, 0.16);
-  --radius: 14px;
+  --sage: #52694A;
+  --sage-soft: #3F5239;
+  --sage-ink: #2C3A28;
+  --sand: #E8DCC7;
+  --gold: #B58A52;
+  --gold-ink: #8A6430;
+  --creme: #F6F2EA;
+  --creme-deep: #E8DCC7;
+  --paper: #FFFCF7;
+  --line: rgba(82, 105, 74, 0.16);
+  --shadow: 0 14px 36px rgba(44, 58, 40, 0.12);
+  --radius: 16px;
   --max: 72rem;
   --header-h: 4.25rem;
   --text: 1.0625rem;
   --leading: 1.65;
+  /* Aliase, damit bestehende Regeln den neuen Satz nutzen */
+  --petrol: var(--sage);
+  --petrol-soft: var(--sage-soft);
+  --petrol-ink: var(--sage-ink);
+  --tomato: var(--gold-ink);
+  --tomato-deep: #6F4F24;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -45,7 +61,7 @@ body {
   margin: 0;
   background: var(--creme);
   color: var(--petrol-ink);
-  font-family: "Open Sans", "Segoe UI", sans-serif;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
   font-size: var(--text);
   font-weight: 450;
   line-height: var(--leading);
@@ -54,7 +70,7 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: var(--petrol-soft); }
 a:hover { color: var(--tomato); }
 :focus-visible {
-  outline: 3px solid var(--tomato);
+  outline: 3px solid var(--sage);
   outline-offset: 3px;
 }
 
@@ -74,7 +90,7 @@ a:hover { color: var(--tomato); }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(249, 245, 233, 0.94);
+  background: rgba(246, 242, 234, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -97,15 +113,29 @@ a:hover { color: var(--tomato); }
   color: var(--petrol);
   min-width: 0;
 }
-.brand img {
-  width: 2.7rem;
-  height: 2.7rem;
+.brand img,
+.brand-logo {
+  width: 3.1rem;
+  height: 3.1rem;
   border-radius: 50%;
   flex-shrink: 0;
 }
+.brand-wordmark {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--gold-ink);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.brand.no-logo .brand-logo { display: none; }
+.brand:not(.no-logo) .brand-wordmark { display: none; }
+.brand .brand-kicker { display: none; }
+
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-kicker {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -113,8 +143,8 @@ a:hover { color: var(--tomato); }
   color: var(--tomato);
 }
 .brand-name {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 750;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
   font-size: 0.95rem;
   text-wrap: balance;
 }
@@ -144,7 +174,7 @@ a:hover { color: var(--tomato); }
   margin-bottom: 2rem;
 }
 .eyebrow {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -153,7 +183,7 @@ a:hover { color: var(--tomato); }
   margin: 0 0 0.5rem;
 }
 h1, h2, h3, .display {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", Georgia, serif;
   color: var(--petrol);
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -174,15 +204,20 @@ h3 { font-weight: 700; font-size: 1.15rem; }
 /* Hero */
 .hero {
   position: relative;
-  min-height: 26rem;
-  height: 74svh;
-  max-height: 38rem;
+  min-height: 22rem;
+  height: auto;
+  max-height: none;
   display: grid;
-  align-items: end;
+  align-items: center;
   color: var(--petrol-ink);
   isolation: isolate;
+  background:
+    linear-gradient(180deg, rgba(246, 242, 234, 0.55) 0%, rgba(232, 220, 199, 0.28) 42%, rgba(246, 242, 234, 0.94) 100%),
+    url("../img/marke/muster-botanik.svg") center / cover no-repeat,
+    var(--creme);
 }
 .hero-photo {
+  display: none;
   position: absolute;
   inset: 0;
   z-index: -2;
@@ -191,13 +226,20 @@ h3 { font-weight: 700; font-size: 1.15rem; }
   object-fit: cover;
   object-position: center 45%;
 }
-.hero::after {
+.hero.has-photo {
+  align-items: end;
+  min-height: 26rem;
+  height: 74svh;
+  max-height: 38rem;
+}
+.hero.has-photo .hero-photo { display: block; }
+.hero.has-photo::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(8, 40, 51, 0.08) 0%, rgba(8, 40, 51, 0.18) 45%, rgba(8, 40, 51, 0.42) 100%);
+    linear-gradient(180deg, rgba(44, 58, 40, 0.08) 0%, rgba(44, 58, 40, 0.2) 45%, rgba(44, 58, 40, 0.48) 100%);
 }
 .hero-inner {
   max-width: var(--max);
@@ -206,8 +248,15 @@ h3 { font-weight: 700; font-size: 1.15rem; }
   width: 100%;
 }
 .hero-card {
-  background: var(--creme);
+  background: transparent;
   color: var(--petrol-ink);
+  padding: 1.6rem 0 2rem;
+  border-radius: 0;
+  max-width: 38rem;
+  box-shadow: none;
+}
+.hero.has-photo .hero-card {
+  background: var(--creme);
   padding: 1.25rem 1.2rem 1.35rem;
   border-radius: 18px;
   max-width: 34rem;
@@ -235,11 +284,11 @@ h3 { font-weight: 700; font-size: 1.15rem; }
   white-space: nowrap;
 }
 .btn-primary {
-  background: var(--tomato);
-  color: #fff;
-  border-color: var(--tomato);
+  background: var(--sage);
+  color: var(--creme);
+  border-color: var(--sage);
 }
-.btn-primary:hover { background: var(--tomato-deep); border-color: var(--tomato-deep); color: #fff; }
+.btn-primary:hover { background: var(--sage-soft); border-color: var(--sage-soft); color: var(--creme); }
 .btn-ghost {
   background: transparent;
   color: var(--creme);
@@ -430,17 +479,17 @@ details p { margin: 0 0 1rem; text-wrap: pretty; }
 /* Footer + subpages */
 .site-footer {
   background: var(--petrol-ink);
-  color: #e7efe8;
+  color: #F3EEE0;
   padding: 2.4rem 0 2rem;
   margin-top: 1rem;
 }
-.site-footer a { color: #f3eee0; }
+.site-footer a { color: var(--sand); }
 .footer-grid {
   display: grid;
   gap: 1.4rem;
 }
 .footer-links { display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem; }
-.credits { font-size: 0.88rem; color: #c9d5d3; }
+.credits { font-size: 0.88rem; color: #D9CDB6; }
 .credits ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
 .placeholder {
   display: inline;
@@ -485,7 +534,8 @@ details p { margin: 0 0 1rem; text-wrap: pretty; }
   .nav { width: 100%; justify-content: flex-start; gap: 0.85rem 1.05rem; }
   .brand-kicker { font-size: 0.62rem; }
   .brand-name { font-size: 0.9rem; }
-  .hero { min-height: 26rem; height: 28rem; max-height: 30rem; }
+  .hero { min-height: 0; height: auto; max-height: none; }
+  .hero.has-photo { min-height: 22rem; height: 26rem; max-height: 28rem; }
   .hero-photo { object-position: center 38%; }
   .hero-inner { padding: 0.7rem 1rem 0.85rem; }
   .hero-card { padding: 0.85rem 0.95rem 1rem; }
@@ -494,11 +544,11 @@ details p { margin: 0 0 1rem; text-wrap: pretty; }
   .hero-actions { gap: 0.45rem; }
   .hero-actions .btn { padding: 0.65rem 1rem; font-size: 0.88rem; }
   .header-inner { min-height: 0; padding-top: 0.5rem; padding-bottom: 0.5rem; }
-  .brand img { width: 2.3rem; height: 2.3rem; }
+  .brand img, .brand-logo { height: 2.6rem; width: 2.6rem; }
   .book-actions .btn { white-space: nowrap; }
 }
 @media (min-width: 900px) {
-  .hero { min-height: 30rem; height: 72svh; max-height: 40rem; }
+  .hero.has-photo { min-height: 30rem; height: 72svh; max-height: 40rem; }
   .hero-inner { padding-bottom: 2rem; }
 }
 
@@ -765,7 +815,7 @@ details p { margin: 0 0 1rem; text-wrap: pretty; }
 }
 .tl-dur {
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--petrol-soft);
@@ -1019,3 +1069,72 @@ details p { margin: 0 0 1rem; text-wrap: pretty; }
   h2 { font-size: 13pt; }
   h3 { font-size: 11pt; }
 }
+
+
+/* Slogan-Pinsel und Marken-Icons (Vorschau) */
+.slogan-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.35rem 1rem 0.55rem;
+  background: var(--sand);
+  border-bottom: 1px solid var(--line);
+}
+.slogan-brush {
+  margin: 0;
+  font-family: "Great Vibes", "Palatino Linotype", cursive;
+  font-weight: 400;
+  font-size: clamp(1.45rem, 4.2vw, 2.2rem);
+  line-height: 1.2;
+  color: var(--creme);
+  text-align: center;
+  background: url("../img/marke/pinsel-banner.svg") center / 100% 100% no-repeat;
+  padding: 0.45rem 1.8rem 0.7rem;
+  max-width: 40rem;
+  width: 100%;
+}
+.value-band {
+  padding: 2.2rem 0 0.4rem;
+}
+.value-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.value-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.55rem;
+}
+.value-grid img {
+  width: 4.4rem;
+  height: 4.4rem;
+}
+.value-grid span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  color: var(--sage-ink);
+  max-width: 12ch;
+  text-wrap: balance;
+}
+.footer-brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  color: var(--sand);
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+}
+.footer-tagline { margin: 0 0 1rem; }
+@media (min-width: 800px) {
+  .value-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+}
+
+/* Header-Logo darf nicht als Kreis beschnitten werden */
+.brand-text { min-width: 0; }

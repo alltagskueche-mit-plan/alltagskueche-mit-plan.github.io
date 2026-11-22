@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+<rect width="1200" height="1200" rx="600" fill="#F6F2EA"/>
+<circle cx="600" cy="600" r="557" stroke="#B58A52" stroke-width="8" fill="none"/>
+<g transform="translate(600 350) scale(1.2)"><g fill="none" stroke="#6D8055" stroke-linecap="round" stroke-width="6">
+<path d="M-92 41 C-55 8,-5 -24,100 -70"/>
+</g><g fill="#6D8055">
+<path d="M-60 23 C-105 -22,-100 -55,-76 -58 C-43 -61,-48 -22,-60 23Z"/>
+<path d="M-30 3 C-66 -58,-44 -85,-23 -76 C3 -64,-6 -28,-30 3Z"/>
+<path d="M7 -20 C-6 -91,25 -115,43 -95 C62 -73,46 -38,7 -20Z"/>
+<path d="M47 -42 C55 -103,97 -117,106 -90 C113 -61,82 -43,47 -42Z"/>
+<path d="M-75 32 C-119 21,-139 47,-121 64 C-101 79,-83 58,-75 32Z"/>
+<path d="M-7 0 C-1 38,31 42,40 20 C48 -1,23 -12,-7 0Z"/>
+</g></g>
+<text x="600" y="744" text-anchor="middle" fill="#34462B" font-family="EB Garamond, Georgia, serif" font-size="365" letter-spacing="-16">HW</text>
+<text x="600" y="871" text-anchor="middle" fill="#6D8055" font-family="DejaVu Sans,sans-serif" font-size="38" letter-spacing="8">HANNA WEIDINGER</text>
+</svg>

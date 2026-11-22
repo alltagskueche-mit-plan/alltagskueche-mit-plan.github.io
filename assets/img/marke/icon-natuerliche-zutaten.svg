@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none" role="img" aria-hidden="true">
+  <title>Natürliche Zutaten</title>
+  <circle cx="48" cy="48" r="44" stroke="#B58A52" stroke-width="1.6"/>
+  <circle cx="48" cy="48" r="39.5" stroke="#52694A" stroke-width="0.6" opacity=".35"/>
+  
+  <g stroke="#52694A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 64c8 8 18 8 24 2 4-4 4-10 0-16-6-6-16-6-24 2-4 4-4 10 0 12z"/>
+    <path d="M52 44 L70 28"/>
+    <path d="M60 40c6-2 10-2 14 2-4 2-8 6-14 6 0-4 0-6 0-8z"/>
+    <path d="M58 48c-6-2-10-1-14 4 4 2 9 4 14 2 0-2 0-4 0-6z"/>
+  </g>
+
+</svg>

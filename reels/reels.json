@@ -2,6 +2,21 @@
   "hinweis": "Quelle für die Seite /reels/. Neuestes Reel oben (höhere Nummer bzw. späteres Datum). Siehe README-reels.md im Repo-Wurzelverzeichnis.",
   "reels": [
     {
+      "nr": 2,
+      "titel": "Dein Kühlschrank, mein Plan",
+      "slug": "kuehlschrank-folge-1",
+      "datum": "2026-11-23",
+      "datum_anzeige": "Ab heute 18:30 (Europe/Vienna) · 23. November 2026",
+      "beschreibung": "Aus halber Zucchini, Reis von gestern, 4 Eiern, Feta und Tomaten wird ein 3-Tage-Plan: montags Zucchini-Reispfanne, dienstags Frittata mit Feta, mittwochs Reis-Bowl mit Gemüse.",
+      "bild": "../assets/img/reels/plan-02-kuehlschrank.jpg",
+      "bild_webp": "../assets/img/reels/plan-02-kuehlschrank.webp",
+      "bild_breite": 800,
+      "bild_hoehe": 1200,
+      "bild_alt": "Standbild aus dem Reel „Dein Kühlschrank, mein Plan“, Folge 1: Blick von innen in einen Kühlschrank, darüber der Text „Was liegt noch in deinem Kühlschrank?“",
+      "bildnachweis": "Standbild (0:00) aus dem Reel „Dein Kühlschrank, mein Plan“, Folge 1. Filmausschnitt: Polina Tankilevitch, „A Person Taking Fresh Strawberry from the Fridge“, Pexels 4443523, Lizenz Free (pexels.com/license). Text und Monogramm: Hanna Weidinger / Alltagsküche mit Plan.",
+      "plan_url": "../plan/kuehlschrank-folge-1/"
+    },
+    {
       "nr": 1,
       "titel": "Vier Schritte am Sonntag",
       "slug": "sonntag-vier-schritte",

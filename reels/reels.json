@@ -2,6 +2,21 @@
   "hinweis": "Quelle für die Seite /reels/. Neuestes Reel oben (höhere Nummer bzw. späteres Datum). Siehe README-reels.md im Repo-Wurzelverzeichnis.",
   "reels": [
     {
+      "nr": 3,
+      "titel": "Meal Prep heißt nicht: fünf gleiche Boxen",
+      "slug": "fuenf-boxen",
+      "datum": "2026-11-25",
+      "datum_anzeige": "Reel vom 25. November 2026",
+      "beschreibung": "Bausteine statt fünf gleicher Boxen: ein Blech Gemüse, ein Topf Getreide – jeden Tag neu kombiniert. Zum direkten Nachkochen verlinkt diese Seite außerdem auf den ausgerechneten Wochenplan in Plan Nr. 1.",
+      "bild": "../assets/img/reels/plan-03-fuenf-boxen.jpg",
+      "bild_webp": "../assets/img/reels/plan-03-fuenf-boxen.webp",
+      "bild_breite": 800,
+      "bild_hoehe": 1200,
+      "bild_alt": "Standbild aus dem Reel „Meal Prep heißt nicht: fünf gleiche Boxen“: Vorbereitete Mahlzeiten in Boxen, darüber der Text „Meal Prep heißt nicht: fünf gleiche Boxen.“",
+      "bildnachweis": "Standbild (0:00) aus dem Reel „Meal Prep heißt nicht: fünf gleiche Boxen“. Foto: IARA MELO, „Healthy Meal Prep Containers with Grilled Chicken“, Pexels 30635703, Lizenz Free (pexels.com/license). Text und Monogramm: Hanna Weidinger / Alltagsküche mit Plan.",
+      "plan_url": "../plan/fuenf-boxen/"
+    },
+    {
       "nr": 2,
       "titel": "Dein Kühlschrank, mein Plan",
       "slug": "kuehlschrank-folge-1",

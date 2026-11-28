@@ -2,6 +2,36 @@
   "hinweis": "Quelle für die Seite /reels/. Neuestes Reel oben (höhere Nummer bzw. späteres Datum). Siehe README-reels.md im Repo-Wurzelverzeichnis.",
   "reels": [
     {
+      "nr": 5,
+      "titel": "Keine Mikrowelle im Büro. Trotzdem etwas Vernünftiges essen.",
+      "slug": "lunch-ohne-mikrowelle",
+      "datum": "2026-11-28",
+      "datum_anzeige": "Reel zum kalten Büro-Lunch · Plan Nr. 5",
+      "beschreibung": "Getreidesalat oder ein Wrap vom Vorabend schmecken auch kalt – das Dressing kommt in ein eigenes Glas und erst im Büro darüber.",
+      "bild": "../assets/img/reels/plan-05-lunch-ohne-mikrowelle.jpg",
+      "bild_webp": "../assets/img/reels/plan-05-lunch-ohne-mikrowelle.webp",
+      "bild_breite": 800,
+      "bild_hoehe": 1200,
+      "bild_alt": "Standbild aus dem Reel „Keine Mikrowelle im Büro. Trotzdem etwas Vernünftiges essen.“: Schüssel mit Getreidesalat im Büro, darüber der Text „Keine Mikrowelle im Büro. Trotzdem etwas Vernünftiges essen.“",
+      "bildnachweis": "Standbild (0:00) aus dem Reel „Lunch ohne Mikrowelle“. Video: MART PRODUCTION, „A person mixing a takeaway salad in a paper bowl“, Pexels 8164098, Lizenz Free (pexels.com/license). Text und Monogramm: Hanna Weidinger / Alltagsküche mit Plan.",
+      "plan_url": "../plan/lunch-ohne-mikrowelle/"
+    },
+    {
+      "nr": 4,
+      "titel": "Mittwochs denselben Eintopf sehen?",
+      "slug": "mittwoch-eintopf",
+      "datum": "2026-11-28",
+      "datum_anzeige": "Reel vom 28. November 2026",
+      "beschreibung": "Bausteine am Sonntag statt fünf gleicher Boxen: Blech, Getreide sowie Topf und Soße getrennt vorbereiten und von Montag bis Freitag verschieden kombinieren.",
+      "bild": "../assets/img/reels/plan-04-mittwoch-eintopf.jpg",
+      "bild_webp": "../assets/img/reels/plan-04-mittwoch-eintopf.webp",
+      "bild_breite": 800,
+      "bild_hoehe": 1200,
+      "bild_alt": "Standbild aus dem Reel „Mittwochs denselben Eintopf sehen?“: Bohneneintopf im Topf, darüber der Text „Es ist Mittwoch. Und du kannst den Eintopf nicht mehr sehen.“",
+      "bildnachweis": "Standbild (0:00) aus dem Reel „Mittwoch-Eintopf“. Video: IslandHopper X, „Simmering Tomato Stew in Rustic Pot“, Pexels 35510474, Lizenz Free (pexels.com/license). Text und Monogramm: Hanna Weidinger / Alltagsküche mit Plan.",
+      "plan_url": "../plan/mittwoch-eintopf/"
+    },
+    {
       "nr": 3,
       "titel": "Meal Prep heißt nicht: fünf gleiche Boxen",
       "slug": "fuenf-boxen",

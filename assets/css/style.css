@@ -79,7 +79,8 @@ button {
 }
 img {
   display:block;
-  max-width:100%
+  max-width:100%;
+  height:auto
 }
 button,a {
   -webkit-tap-highlight-color:transparent
@@ -2042,6 +2043,7 @@ body.subpage .plan-hero,
 .cover-wrap picture { display: block; width: 100%; }
 .cover-wrap img {
   width: 100%;
+  height: auto;
   aspect-ratio: 5 / 8;
   object-fit: cover;
   object-position: top center;
